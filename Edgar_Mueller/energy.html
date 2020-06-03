@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Edgar Müeller - The caves</title>
+<link href="estilo/estiloalternativo.css" rel="stylesheet" type="text/css" />
+<link href="estilo/obras.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="showSlides(1)" style="overflow:hidden">
+<!-- Inicio do menu !-->
+<script>
+  function myFunction(x) {
+      x.classList.toggle("change");
+  }
+  
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+  </script>
+<nav id="all">
+<input type="checkbox" id="chec">
+<label for="chec">
+  <div class="container" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
+</label>
+<div class="bg"></div>
+<nav id="principal">
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li id="sub10">
+          <div class="a">Obras <span>+</span></div>
+          <nav id="obras">
+              <ul>
+                  <li ><a href="3dpavement.html">3D Pavement Art</a></li>
+                  <li ><a href="evolution.html">Evolution</a></li>
+                  <li ><a href="thecaves.html">The Caves</a></li>
+                  <li ><a href="ark.html">The Ark</a></li>
+              </ul>
+          </nav>
+      </li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="estilo.html">Estilo das obras</a></li>
+	  <li id="sub11"><div class="a">Contato <span>+</span></div>
+		<div id="contato">
+		<form action="?valid=1" id="form1" name="form1" method="post">
+		<p class="white">Nome*:</p> <p><input type="text" name="nome" required placeholder="Nome completo"></p> <br>
+		<p class="white">E-mail*:</p> <p><input type="email" name="email" required placeholder="E-mail para contato"></p> <br>
+		<p class="white">Empresa:</p> <p><input type="text" name="empresa" placeholder="Empresa representada"></p> <br>
+		<p class="white">Posição:</p> <p><input type="text" name="posicao" placeholder="Seu cargo"></p> <br>
+		<p class="white">Mensagem*:</p> <p><textarea name="mensagem" cols="40" rows="8" required placeholder="Sua mensagem"></textarea></p>
+		<input type="submit" value="Enviar" id="enviar">
+		</form>
+		</div>
+	  </li>
+  </ul>
+</nav>
+</nav>
+<!-- Fim do menu !-->
+
+<!-- Inicio dos conteudos !-->
+<section class="bg" style="display:block;overflow:auto;">
+<section id="espaco">&nbsp;</section>
+<section class="titulo" style="color:white;"><center><h1><u>Energy</u></h1></center></section>
+<br>
+<center>
+<section style="width:70%;">
+
+<h2 style="color:white;"><u>Descrição</u></h2>
+<br>
+	<center><div class="conteudo" style="color:#fff;font-size:1.05em;">
+		<p> Por ocasião do <strong>InTransit Festival London, Chelsea</strong> Edgar Mueller fará a primeira pintura da nova série chamada 'Evolution'. Ele começará a pintar em 10.07.2012 e terminará a pintura no domingo, 15.07.2012.
+</p>
+		<p> A "Energia", em tradução livre para o português, é uma entre um grande número de ilusões anamórficas nas quais uma pintura bidimensional inteligentemente construída se parece com um objeto tridimensional quando vista do ângulo reto.</p>
+		<p> A galeria a baixo apresenta todo o desenvolvimento da "Energia" feito por Edgar Müeller e sua obra já finalizada.</p>
+	</div></center>
+<br>
+<br>
+<h2 style="color:white;"><u>Informações</u></h2>
+<br>
+<br>
+	<table>
+		<tr>
+			<td class="bortb1"><strong>Autor:</strong> </td>
+			<td class="bortb3">Edgar Müeller </td>
+		</tr>
+		<tr>
+			<td class="bortb1"><strong>Album:</strong> </td>
+			<td class="bortb3">Evolution </td>
+		</tr>
+		<tr>
+			<td class="bortb1"><strong>Nome da obra:</strong> </td>
+			<td class="bortb3">Energy </td>
+		</tr>
+		<tr>
+			<td class="bortb1"><strong>Data da criação:</strong> </td>
+			<td class="bortb3">Julho de 2012 </td>
+		</tr>
+		<tr>
+			<td class="bortb2"><strong>Realizada em:</strong> </td>
+			<td>London Chelsea - Portobello Square </td>
+		</tr>
+	</table>
+</section>
+</center>
+<br>
+
+<br>
+<section>
+<center><h2 style="color:white;"><u>Galeria</u></h2></center>
+<br>
+<!-- Container for the image gallery -->
+<center>
+<div id="container">
+
+  <!-- Full-width images with number text -->
+  
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+      <img src="imagens/obras/evolution/energia/Energia (3).jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides" >
+    <div class="numbertext">2 / 6</div>
+      <img src="imagens/obras/evolution/energia/Energia (1).jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="imagens/obras/evolution/energia/Energia (2).jpg" style="width:100%">
+  </div>
+
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="imagens/obras/evolution/energia/Energia (4).jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="imagens/obras/evolution/energia/Energia (5).jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="imagens/obras/evolution/energia/Energia (6).jpg" style="width:100%">
+  </div>
+  
+  
+
+  
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+	 <div class="column" style="background-color:#222;">
+      <img class="demo cursor" src="imagens/obras/evolution/energia/Energia (3).jpg" style="width:100%" onclick="currentSlide(1)" alt="Edgar Müeller e artistas locais fazendo a 'Cascata' - parte 1">
+    </div>
+	<div class="column">
+      <img class="demo cursor" src="imagens/obras/evolution/energia/Energia (1).jpg" style="width:100%" onclick="currentSlide(2)" alt="Materiais usados para pintura da 'Cascata'">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="imagens/obras/evolution/energia/Energia (2).jpg" style="width:100%" onclick="currentSlide(3)" alt="Começa a pintura da 'Cascata com ajuda de artistas locais'">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="imagens/obras/evolution/energia/Energia (4).jpg" style="width:100%" onclick="currentSlide(4)" alt="Edgar Müeller e artistas locais fazendo a 'Cascata' - parte 2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="imagens/obras/evolution/energia/Energia (5).jpg" style="width:100%" onclick="currentSlide(5)" alt="Edgar Müeller e artistas locais fazendo a 'Cascata' - parte 3">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="imagens/obras/evolution/energia/Energia (6).jpg" style="width:100%" onclick="currentSlide(6)" alt="Edgar Müeller e artistas locais fazendo a 'Cascata' - parte 4">
+    </div>
+  </div>
+</div>
+</center>
+<br>
+
+</section>
+</section>
+
+<br>
+<script>
+setTimeout(function resposta(){
+var url_ = new URL(location.href);
+var valid = url_.searchParams.get("valid");
+
+if (valid == 1){
+		window.alert("Sua mensagem foi enviada com sucesso! Vamos analisa-la e tentaremos entrar em contato por e-mail o mais breve possivel")
+}
+},500);
+</script>
+</body>
+</html>

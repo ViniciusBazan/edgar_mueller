@@ -1,0 +1,184 @@
+	/* teste */
+	
+
+@media screen and (min-width: 1000px){
+.relative{
+		position:relative !important;
+}
+
+.ultable{
+	position: relative !important;
+	overflow:auto;
+	width:fit-content;
+	max-width:75%;
+	height:auto;
+	margin-left: auto;
+    margin-right: auto;
+	background-color: rgba(0,0,0,.5);
+}
+
+
+.ProjectLink{
+	position:relative !important;
+}
+
+	.ProjectLinkContainer .ultable,.ProjectLink{
+	position:relative !important;
+	list-style: none;
+    display: inline;
+	float:left;
+}
+
+.ateste{
+	position:relative;
+	display:block;
+	transition: all 0.4s;
+	border-radius: 100%;
+	background-image: radial-gradient(rgba(255,255,255,0),rgba(255,255,255,0));
+}
+
+.ateste:hover{
+	position:relative;
+	background-image: radial-gradient(rgba(255,255,255,1),rgba(255,255,255,0));
+	border-radius: 100%;
+	transition: all 0.4s;
+}
+
+
+p{
+	color:#fff;
+}	
+}
+
+
+
+	/*  */
+	/*  */
+	/*  */
+	/*  */
+	/*  */
+	
+	
+@media screen and (min-width: 700px) and (max-width: 1000px){
+.relative{
+		position:relative !important;
+}
+
+.ultable{
+	position: relative !important;
+	overflow:auto;
+	width:fit-content;
+	max-width:68%;
+	height:auto;
+	margin-left: auto;
+    margin-right: auto;
+	background-color: rgba(0,0,0,.5);
+}
+
+
+.ProjectLink{
+	position:relative !important;
+}
+
+	.ProjectLinkContainer .ultable,.ProjectLink{
+	position:relative !important;
+	list-style: none;
+    display: inline;
+	float:left;
+}
+
+.ateste{
+	position:relative;
+	display:block;
+	transition: all 0.4s;
+	border-radius: 100%;
+	background-image: radial-gradient(rgba(255,255,255,0),rgba(255,255,255,0));
+}
+
+.ateste:hover{
+	position:relative;
+	background-image: radial-gradient(rgba(255,255,255,1),rgba(255,255,255,0));
+	border-radius: 100%;
+	transition: all 0.4s;
+}
+
+
+p{
+	color:#fff;
+}	
+}
+
+
+
+	/*  */
+	/*  */
+	/*  */
+	/*  */
+	/*  */
+	
+	
+	
+@media screen and (max-width: 700px){
+.relative{
+		position:relative !important;
+}
+
+.ultable{
+	position: relative !important;
+	overflow:auto;
+	width:fit-content;
+	max-width:55%;
+	height:auto;
+	margin-left: auto;
+    margin-right: auto;
+	background-color: rgba(0,0,0,.5);
+}
+
+
+.ProjectLink{
+	position:relative !important;
+}
+
+	.ProjectLinkContainer .ultable,.ProjectLink{
+	position:relative !important;
+	list-style: none;
+    display: inline;
+	float:left;
+}
+
+.ateste{
+	position:relative;
+	display:block;
+	transition: all 0.4s;
+	border-radius: 100%;
+	background-image: radial-gradient(rgba(255,255,255,0),rgba(255,255,255,0));
+}
+
+.ateste:hover{
+	position:relative;
+	background-image: radial-gradient(rgba(255,255,255,1),rgba(255,255,255,0));
+	border-radius: 100%;
+	transition: all 0.4s;
+}
+
+
+p{
+	color:#fff;
+}	
+}
+
+
+
+	/*  */
+	/*  */
+	/*  */
+	/*  */
+	/*  */
+
+
+
+
+
+
+
+	/* teste */

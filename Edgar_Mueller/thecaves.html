@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Edgar Müeller - The caves</title>
+<link href="estilo/estilo.css" rel="stylesheet" type="text/css" />
+<link href="estilo/obras.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- Inicio do menu !-->
+<script>
+  function myFunction(x) {
+      x.classList.toggle("change");
+  }
+  </script>
+<nav id="all">
+<input type="checkbox" id="chec">
+<label for="chec">
+  <div class="container" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
+</label>
+<div class="bg"></div>
+<nav id="principal">
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li id="sub10">
+          <div class="a">Obras <span>+</span></div>
+          <nav id="obras">
+              <ul>
+                  <li ><a href="3dpavement.html">3D Pavement Art</a></li>
+                  <li ><a href="evolution.html">Evolution</a></li>
+                  <li ><a href="thecaves.html">The Caves</a></li>
+                  <li ><a href="ark.html">The Ark</a></li>
+              </ul>
+          </nav>
+      </li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="estilo.html">Estilo das obras</a></li>
+	  <li id="sub11"><div class="a">Contato <span>+</span></div>
+		<div id="contato">
+		<form action="?valid=1" id="form1" name="form1" method="post">
+		<p class="white">Nome*:</p> <p><input type="text" name="nome" required placeholder="Nome completo"></p> <br>
+		<p class="white">E-mail*:</p> <p><input type="email" name="email" required placeholder="E-mail para contato"></p> <br>
+		<p class="white">Empresa:</p> <p><input type="text" name="empresa" placeholder="Empresa representada"></p> <br>
+		<p class="white">Posição:</p> <p><input type="text" name="posicao" placeholder="Seu cargo"></p> <br>
+		<p class="white">Mensagem*:</p> <p><textarea name="mensagem" cols="40" rows="8" required placeholder="Sua mensagem"></textarea></p>
+		<input type="submit" value="Enviar" id="enviar">
+		</form>
+		</div>
+	  </li>
+  </ul>
+</nav>
+</nav>
+<!-- Fim do menu !-->
+
+<!-- Inicio dos conteudos !-->
+<section id="espaco">&nbsp;</section>
+<section class="titulo"><center><h1><u>THE</u> <u>CAVES</u></h1></center></section>
+<br>
+	<ul class="ultable">
+		<li class="ProjectLink">
+			<a href="caveing.html" class="ateste">
+				<img src="imagens/Preview/London-England__preview.png" class="ProjectPreviewImg">
+			</a>
+			<br>
+			<center>
+				<p>Cavernas misteriosas</p> <p>em Londres</p>
+			</center>
+			</li>
+			<li class="ProjectLink">
+			<a href="caveale.html" class="ateste">
+				<img src="imagens/Preview/Geldern-Germany_preview.png" class="ProjectPreviewImg">
+			</a>
+			<br>
+			<center>
+				<p>Cavernas misteriosas</p> <p>na Alemanha</p>
+			</center>
+			</li>
+			<li class="ProjectLink">
+			<a href="caveesl.html" class="ateste">
+				<img src="imagens/Preview/Ptuj-Slovenia_preview.png" class="ProjectPreviewImg">
+			</a>
+			<br>
+			<center>
+				<p>Cavernas misteriosas</p> <p>na Eslôvenia</p>
+			</center>
+			</li>
+	</ul>
+<br>
+<br>
+<script>
+setTimeout(function resposta(){
+var url_ = new URL(location.href);
+var valid = url_.searchParams.get("valid");
+
+if (valid == 1){
+		window.alert("Sua mensagem foi enviada com sucesso! Vamos analisa-la e tentaremos entrar em contato por e-mail o mais breve possivel")
+}
+},500);
+</script>
+</body>
+</html>

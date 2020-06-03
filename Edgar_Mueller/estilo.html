@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Edgar Müeller - Estilo das obras</title>
+<link href="estilo/estilo.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- Inicio do menu !-->
+<script>
+  function myFunction(x) {
+      x.classList.toggle("change");
+  }
+  </script>
+<nav id="all">
+<input type="checkbox" id="chec">
+<label for="chec">
+  <div class="container" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
+</label>
+<div class="bg"></div>
+<nav id="principal">
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li id="sub10">
+          <div class="a">Obras <span>+</span></div>
+          <nav id="obras">
+              <ul>
+                  <li ><a href="3dpavement.html">3D Pavement Art</a></li>
+                  <li ><a href="evolution.html">Evolution</a></li>
+                  <li ><a href="thecaves.html">The Caves</a></li>
+                  <li ><a href="ark.html">The Ark</a></li>
+              </ul>
+          </nav>
+      </li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="estilo.html">Estilo das obras</a></li>
+	  <li id="sub11"><div class="a">Contato <span>+</span></div>
+		<div id="contato">
+		<form action="?valid=1" id="form1" name="form1" method="post">
+		<p class="white">Nome*:</p> <p><input type="text" name="nome" required placeholder="Nome completo"></p> <br>
+		<p class="white">E-mail*:</p> <p><input type="email" name="email" required placeholder="E-mail para contato"></p> <br>
+		<p class="white">Empresa:</p> <p><input type="text" name="empresa" placeholder="Empresa representada"></p> <br>
+		<p class="white">Posição:</p> <p><input type="text" name="posicao" placeholder="Seu cargo"></p> <br>
+		<p class="white">Mensagem*:</p> <p><textarea name="mensagem" cols="40" rows="8" required placeholder="Sua mensagem"></textarea></p>
+		<input type="submit" value="Enviar" id="enviar">
+		</form>
+		</div>
+	  </li>
+  </ul>
+</nav>
+</nav>
+<!-- Fim do menu !-->
+
+<!-- Inicio dos conteudos !-->
+<div style="background-color: rgba(0, 0, 0, .6);">
+<section id="espaco">&nbsp;</section>
+<section class="titulo" style="color:#fff;"><center><h1><u>ESTILO</u> <u>DAS</u> <u>OBRAS</u></h1></center></section>
+<br>
+<section class="conteudo" style="color:#fff;font-size:1em;">
+	<div class="psobre"><p> Eu realizo pintura de rua, essa pintura também é conhecida como screeving, arte no pavimento, arte de rua e arte na calçada, é a arte da performance de renderização de projetos artísticos no pavimento, tais como ruas, calçadas e praças com materiais impermanentes e semi-permanentes, tais como giz.</p></div>
+	<p><center><img src="imagens/The_Waterfall.jpg" width="100%" height="auto" class="moldura"></center></p>
+	<div class="psobre"><p> Um exemplo é a obra a cima feita por mim, chamada de "The Waterfall" (em tradução livre: "A cascata"), onde ela foi feita em uma rua de pedestres, com materiais impermeaveis, que evitam sua degradação ao ser exposta, por exemplo, a chuva</p></div>
+	<br>
+	<div class="psobre"><h2>Origem</h2></div>
+	<div class="psobre"><p> As origens da pintura moderna de rua podem ser encontradas na Grã-Bretanha. Artistas de calçada foram encontrados em todo o Reino Unido e, em 1890, estimava-se que mais de 500 artistas viviam em tempo integral da arte de calçada somente em Londres. </p></div>
+	<div class="psobre"><p> As obras dos screevers eram frequentemente acompanhadas de poemas e provérbios, lições sobre moralidade e comentários políticos sobre os acontecimentos do dia. Eles foram descritos como "produzindo um jornal pictórico tópico do evento atual". Apelaram aos trabalhadores, que (em geral) não sabiam ler nem escrever, mas entendiam as imagens visuais; e aos membros instruídos da classe média que apreciaram as lições e comentários morais. Era importante para um screever chamar a atenção do 'bem para fazer' e, por sua vez, atrair os centavos doados por seus esforços.</p></div>
+	<p><img src="imagens/festival.png" width="100%" height="auto" class="moldura">
+	<div class="psobre"><p> Na Alemanha, esse estilo ganha proporções maiores, a ponto de ser feito um festival chamado "Strassenmaler in Neustadt", a imagem acima é uma das pinturas feitas durante esse festival por um dos diversos artistas que participam dele.</p></div>
+</section>
+<br>
+<script>
+setTimeout(function resposta(){
+var url_ = new URL(location.href);
+var valid = url_.searchParams.get("valid");
+
+if (valid == 1){
+		window.alert("Sua mensagem foi enviada com sucesso! Vamos analisa-la e tentaremos entrar em contato por e-mail o mais breve possivel")
+}
+},500);
+</script>
+</div>
+</body>
+</html>

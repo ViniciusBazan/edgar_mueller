@@ -1,0 +1,1456 @@
+/*
+
+-informações uteis:
+	O notebook de casa tem uma medida de 1366x768
+	o monitor 2 de casa tem uma medida de 1280x1024
+	Index já está responsivo
+-Regras do css:
+	Separar media queries por muitos espaçoes e comentarios
+	codigo das media queries: med01
+	codigo de verificado: medver
+
+*/
+
+@charset "utf-8";
+
+/* Formatação padrão */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    font-family: "Agency FB", Arial, SansSerif;
+    font-size: 1.4em;
+    background-color: #ddd;
+	background-image: url("../imagens/The_Crevasse_003.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+ul {
+    list-style: none;
+}
+footer{
+	position: fixed;
+    bottom:0;
+    left:0;
+}
+/* Fim da formatação padrão */
+
+
+
+
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+
+
+
+
+/*  Inicio do media query para monitor com mais de 1000px   med01  */
+@media screen and (min-width: 1000px){
+	
+
+	
+	.caixas{
+		float: left;
+		width: 200px;
+		height: 200px;
+		border: 10px ridge rgb(100,100,100);
+		background-size: cover;
+	}
+	.caixas{
+		border: 10px ridge rgb(200,200,200);
+	}
+	
+.psobre{
+	font-size:1em;
+	transition: 0.6s;
+}
+
+.psobre:hover{
+	font-size:1.2em;
+	transition: 0.6s;
+}
+	
+footer{
+	background-color:#bbb;
+	width:100%;
+	height:50px;
+}
+/* Inicio do css icone do menu hamburguer */
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ddd;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+	background-color: #ddd;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+	background-color: #ddd;
+}
+
+/* Fim do css do icone do menu hamburguer */
+
+/* Inicio Menu hamburguer */
+
+#chec {
+    display: none;
+    /* esconde o checkbox */
+}
+
+#chec:checked ~ #principal {
+    transform: translateX(100%);
+    /* Faz o menu aparecer e reaparecer */
+}
+
+#chec:checked ~ .bg {
+    display: block;
+}
+
+#teste{
+	height: 120vh;
+}
+
+#principal {
+    background-color: rgba(110, 110, 110, 0.7);
+    /* cor do fundo do menu */
+    width: 200px;
+    height: 100vh;
+    /* unidade base do viewport, pega 100% da pagina */
+    left: -200px;
+    position: absolute;
+    transition: all .4s;
+    /* Faz a transição/animação do menu */
+}
+
+#obras {
+    background-color: rgba(110, 110, 110, 0.7);
+    /* cor do fundo do sub-menu */
+    height: 100vh;
+    /* unidade base do viewport, pega 100% da pagina */
+    left: -100%;
+    transition: all .4s;
+    position: relative;
+    /* Faz a transição/animação do menu */
+}
+#contato {
+    background-color: rgba(110, 110, 110, 0.7);
+    /* cor do fundo do sub-menu */
+    height: 100vh;
+    /* unidade base do viewport, pega 100% da pagina */
+    left: -100%;
+    transition: all .4s;
+    position: relative;
+    /* Faz a transição/animação do menu */
+}
+
+a:not(.ateste) {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+}
+
+a:hover:not(.ateste) {
+    /* hover do menu */
+    background-color: rgb(176, 224, 230);
+    color: black;
+}
+.a {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+}
+
+.a:hover {
+    /* hover do menu */
+    background-color: rgb(176, 224, 230);
+    color: black;
+}
+
+label {
+    padding: 1px;
+    margin: 14px;
+    position: absolute;
+    z-index: 1;
+}
+
+ul:not(.ultable) {
+    top: 70px;
+    position: absolute;
+    width: 100%
+}
+
+ul li span {
+    float: right;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .4);
+    display: none;
+}
+.bg2 { /* escurece a home para destaque */
+	position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .3);
+    display: block;
+}
+#all{
+	position: sticky;
+    top:0;
+    z-index:10;
+}
+
+
+#sub10 #obras {
+    top: -70px;
+    position: absolute;
+    width: 170px;
+    pointer-events: none;
+}
+
+#sub10:hover #obras {
+    left: 100%;
+    pointer-events: initial
+}
+
+#sub10 {
+    overflow: hidden;
+    height: 66px;
+}
+
+#sub11 #contato {
+    top: -70px;
+    position: absolute;
+    width: 170px;
+    pointer-events: none;
+}
+
+#sub11:hover #contato {
+    left: 100%;
+    pointer-events: initial;
+	width: 350px;
+}
+
+#sub11 {
+    overflow: hidden;
+    height: 66px;
+}
+
+/* inicio do form */
+#form1{
+	top:90px;
+	position: relative;
+	left:25px;
+	opacity:0;
+	transition: all .4s;
+}
+#sub11:hover #contato #form1{opacity:1;}
+
+.white{
+	color: #fff;
+}
+
+#enviar{
+	font-family: "Agency FB", Arial, SansSerif;
+	font-size:1em;
+	position:relative;
+	top: 50px;
+	left:110px;
+	background-color: rgb(176, 224, 230);
+	color: black;
+	padding: 15px;
+	padding-right:20px;
+	padding-left:20px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	border: 2px solid #3F8E99;
+	transition: all .4s;
+	cursor: pointer;
+}
+#enviar:hover{
+	background-color: #3F8E99;
+	border-color: rgb(176, 224, 230);
+	color: white;
+	transition: all .4s;
+}
+
+/* fim do form */
+
+/* Fim Menu hamburguer */
+
+/* CSS do conteudo */
+#espaco{
+    position:relative;
+    height: 55px;
+}
+.conteudo{
+	text-align: justify;
+	position: relative;
+	left: 10%;
+    width: 80%;
+    -moz-column-count: 2;
+    -moz-column-gap: 50px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 50px;
+    column-count: 2;
+    column-gap: 50px;
+}
+.conteudo2{
+	text-align: justify;
+	position: relative;
+	left: 10%;
+    width: 80%;
+}
+.conteudo p{
+    margin-bottom:20px;
+}
+.titulo{
+    margin-bottom: 20px;
+    font-size:1.3em;
+}
+
+.moldura{
+	border: 10px ridge rgb(100,100,100);
+}
+
+.estiloimg1{
+	width:450px;
+	height:auto;
+}
+
+.img100{
+	width:100%;
+	height:auto;
+}
+/*
+#mueller{
+	bottom:340px;
+	height:auto;
+	position: relative;
+	opacity:0;
+	transition: all .4s;
+}
+#mueller:hover{
+	opacity:1;
+	transition: all .4s;
+}
+*/
+/* caixa do Slideshow */
+.slideshow-container {
+  max-width: 55%;
+  position: relative;
+  margin: auto;
+  border:  7px solid #777;
+}
+
+/* Esconde as imagens por padrão*/
+.mySlides {
+  display: none;
+}
+
+/* botão "proximo" e "anterior" */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* posição do botão "proximo" */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Ao passar o mouse, adicione uma cor de fundo preto com um pouco de transparência */
+.prev:hover, .next:hover {
+  background-color: rgba(50,50,50,0.8);
+}
+
+/* texto da legenda */
+.text {
+  color: #f2f2f2;
+  font-size: 0.65em;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* texto dos numeros (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Os circulos */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* animação de transição */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* mudança de cor da legenda */
+.legenda{
+	color: #111;
+}
+/* Fim do css do slide show */
+
+/* Inicio do CSS da pag sobre */
+
+.foto{
+	background-repeat: no-repeat;
+		background-size:cover;
+	border: 10px ridge rgb(100,100,100);
+	width:180px;
+	height:188px;
+	background-image: url("../imagens/mueller/Edgar_Mueller.jpg");
+	transition: all .4s;
+	webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4ss;
+}
+.foto:hover{
+	background-repeat: no-repeat;
+	background-size:cover;
+	border: 10px ridge rgb(100,100,100);
+	width:180px;
+	height:188px;
+	background-image: url("../imagens/mueller/Edgar_Mueller_vetor.fw.png");
+	transition: all .4s;
+	webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+
+/* Fim do CSS da pag sobre */
+
+.mandar{
+	font-family: "Agency FB", Arial, SansSerif;
+	font-size:1em;
+	position:relative;
+	background-color: rgb(176, 224, 230);
+	color: black;
+	padding: 15px;
+	padding-right:20px;
+	padding-left:20px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	border: 2px solid #3F8E99;
+	transition: all .4s;
+	cursor: pointer;
+}
+.mandar:hover{
+	background-color: #3F8E99;
+	border-color: rgb(176, 224, 230);
+	color: white;
+	transition: all .4s;
+}
+
+.setinha{
+	font-size:0.5em;
+}
+
+}
+/*  Fim do media query para monitor com mais de 1000px  */
+
+
+
+
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+
+
+
+
+/* Inicio do media query para tela de 700px a 1000px  med01 */
+@media screen and (min-width: 700px) and (max-width: 1000px){
+	/* Inicio do css icone do menu hamburguer */
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ddd;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+	background-color: #ddd;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+	background-color: #ddd;
+}
+
+/* Fim do css do icone do menu hamburguer */
+
+/* Inicio Menu hamburguer */
+
+#chec {
+    display: none;
+    /* esconde o checkbox */
+}
+
+#chec:checked ~ #principal {
+    transform: translateX(100%);
+    /* Faz o menu aparecer e reaparecer */
+}
+
+#chec:checked ~ .bg {
+    display: block;
+}
+
+
+
+#principal {
+    background-color: rgba(110, 110, 110, 0.7);
+    /* cor do fundo do menu */
+    width: 200px;
+    height: 100vh;
+    /* unidade base do viewport, pega 100% da pagina */
+    left: -200px;
+    position: absolute;
+    transition: all .4s;
+    /* Faz a transição/animação do menu */
+}
+
+#obras {
+    background-color: rgba(110, 110, 110, 0.7);
+    /* cor do fundo do sub-menu */
+    height: 100vh;
+    /* unidade base do viewport, pega 100% da pagina */
+    left: -100%;
+    transition: all .4s;
+    position: relative;
+    /* Faz a transição/animação do menu */
+}
+
+#contato {
+    background-color: rgba(110, 110, 110, 0.7);
+    /* cor do fundo do sub-menu */
+    height: 100vh;
+    /* unidade base do viewport, pega 100% da pagina */
+    left: -100%;
+    transition: all .4s;
+    position: relative;
+    /* Faz a transição/animação do menu */
+}
+
+a:not(.ateste) {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+}
+
+a:hover:not(.ateste) {
+    /* hover do menu */
+    background-color: rgb(176, 224, 230);
+    color: black;
+}
+.a {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+}
+
+.a:hover {
+    /* hover do menu */
+    background-color: rgb(176, 224, 230);
+    color: black;
+}
+
+label {
+    padding: 1px;
+    margin: 14px;
+    position: absolute;
+    z-index: 1;
+}
+
+ul {
+    top: 70px;
+    position: absolute;
+    width: 100%
+}
+
+ul li span {
+    float: right;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .4);
+    display: none;
+}
+.bg2 { /* escurece a home para destaque */
+	position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .3);
+    display: block;
+}
+#all{
+	position: sticky;
+    top:0;
+    z-index:10;
+}
+
+
+#sub10 #obras {
+    top: -70px;
+    position: absolute;
+    width: 170px;
+    pointer-events: none;
+}
+
+#sub10:hover #obras {
+    left: 100%;
+    pointer-events: initial
+}
+
+#sub10 {
+    overflow: hidden;
+    height: 66px;
+}
+
+#sub11 #contato {
+    top: -70px;
+    position: absolute;
+    width: 170px;
+    pointer-events: none;
+}
+
+#sub11:hover #contato {
+    left: 100%;
+    pointer-events: initial;
+	width: 350px;
+}
+
+#sub11 {
+    overflow: hidden;
+    height: 66px;
+}
+
+/* inicio do form */
+#form1{
+	top:20px;
+	position: relative;
+	left:25px;
+	opacity:0;
+	transition: all .4s;
+}
+#sub11:hover #contato #form1{opacity:1;}
+
+.white{
+	color: #fff;
+}
+
+#enviar{
+	font-family: "Agency FB", Arial, SansSerif;
+	font-size:1em;
+	position:relative;
+	top: 30px;
+	left:110px;
+	background-color: rgb(176, 224, 230);
+	color: black;
+	padding: 15px;
+	padding-right:20px;
+	padding-left:20px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	border: 2px solid #3F8E99;
+	transition: all .4s;
+	cursor: pointer;
+}
+#enviar:hover{
+	background-color: #3F8E99;
+	border-color: rgb(176, 224, 230);
+	color: white;
+	transition: all .4s;
+}
+
+/* fim do form */
+
+/* Fim Menu hamburguer */
+
+/* CSS do conteudo */
+#espaco{
+    position:relative;
+    height: 55px;
+}
+.conteudo{
+	text-align: justify;
+	position: relative;
+	left: 15%;
+    width: 70%;
+}
+.conteudo p{
+    margin-bottom:20px;
+}
+.titulo{
+    margin-bottom: 20px;
+    font-size:1.3em;
+}
+
+.moldura{
+	border: 10px ridge rgb(100,100,100);
+}
+
+.estiloimg1{
+	width:450px;
+	height:auto;
+}
+
+.img100{
+	width:100%;
+	height:auto;
+}
+/*
+#mueller{
+	bottom:340px;
+	height:auto;
+	position: relative;
+	opacity:0;
+	transition: all .4s;
+}
+#mueller:hover{
+	opacity:1;
+	transition: all .4s;
+}
+*/
+/* Inicio do CSS do slide show */
+	* {box-sizing:border-box}
+
+/* caixa do Slideshow */
+.slideshow-container {
+  max-width: 56%;
+  position: relative;
+  margin: auto;
+  border:  7px solid #777;
+}
+
+/* Esconde as imagens por padrão*/
+.mySlides {
+  display: none;
+}
+
+/* botão "proximo" e "anterior" */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* posição do botão "proximo" */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Ao passar o mouse, adicione uma cor de fundo preto com um pouco de transparência */
+.prev:hover, .next:hover {
+  background-color: rgba(50,50,50,0.8);
+}
+
+/* texto da legenda */
+.text {
+  color: #f2f2f2;
+  font-size: 0.65em;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* texto dos numeros (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Os circulos */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* animação de transição */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* mudança de cor da legenda */
+.legenda{
+	color: #111;
+}
+/* Fim do css do slide show */
+
+/* Inicio do CSS da pag sobre */
+
+.foto{
+	background-repeat: no-repeat;
+	background-size:cover;
+	border: 10px ridge rgb(100,100,100);
+	width:140px;
+	height:148px;
+	background-image: url("../imagens/mueller/Edgar_Mueller.jpg");
+	transition: all .4s;
+	webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4ss;
+}
+.foto:hover{
+	background-repeat: no-repeat;
+	background-size:cover;
+	border: 10px ridge rgb(100,100,100);
+	width:140px;
+	height:148px;
+	background-image: url("../imagens/mueller/Edgar_Mueller_vetor.fw.png");
+	transition: all .4s;
+	webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+
+/* Fim do CSS da pag sobre */
+
+.mandar{
+	font-family: "Agency FB", Arial, SansSerif;
+	font-size:1em;
+	position:relative;
+	background-color: rgb(176, 224, 230);
+	color: black;
+	padding: 15px;
+	padding-right:20px;
+	padding-left:20px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	border: 2px solid #3F8E99;
+	transition: all .4s;
+	cursor: pointer;
+}
+.mandar:hover{
+	background-color: #3F8E99;
+	border-color: rgb(176, 224, 230);
+	color: white;
+	transition: all .4s;
+}
+
+.setinha{
+	font-size:0.5em;
+}
+
+}
+/* Fim do media query para tela de 800px a 1000px  */
+
+
+
+
+
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+
+
+
+
+
+/* Inicio do media query para tela menores que 700px  med01 */
+@media screen and (max-width: 700px){
+/* Inicio do css icone do menu hamburguer */
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ddd;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+	background-color: #ddd;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+	background-color: #ddd;
+}
+
+/* Fim do css do icone do menu hamburguer */
+
+/* Inicio Menu hamburguer */
+
+#chec {
+    display: none;
+    /* esconde o checkbox */
+}
+
+#chec:checked ~ #principal {
+    transform: translateX(100%);
+    /* Faz o menu aparecer e reaparecer */
+}
+
+#chec:checked ~ .bg {
+    display: block;
+}
+
+
+
+#principal {
+    background-color: rgba(110, 110, 110, 0.7);
+    /* cor do fundo do menu */
+    width: 130px;
+    height: 100vh;
+    /* unidade base do viewport, pega 100% da pagina */
+    left: -130px;
+    position: absolute;
+    transition: all .4s;
+    /* Faz a transição/animação do menu */
+}
+
+#obras {
+    background-color: rgba(110, 110, 110, 0.7);
+    /* cor do fundo do sub-menu */
+    height: 100vh;
+    /* unidade base do viewport, pega 100% da pagina */
+    left: -100%;
+    transition: all .4s;
+    position: relative;
+    /* Faz a transição/animação do menu */
+}
+#contato {
+    background-color: rgba(110, 110, 110, 0.7);
+    /* cor do fundo do sub-menu */
+    height: 100vh;
+    /* unidade base do viewport, pega 100% da pagina */
+    left: -100%;
+    transition: all .4s;
+    position: relative;
+    /* Faz a transição/animação do menu */
+}
+
+a:not(.ateste) {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+}
+
+a:hover:not(.ateste) {
+    /* hover do menu */
+    background-color: rgb(176, 224, 230);
+    color: black;
+}
+.a {
+    display: block;
+    padding: 20px 5px;
+    color: white;
+}
+
+.a:hover {
+    /* hover do menu */
+    background-color: rgb(176, 224, 230);
+    color: black;
+}
+
+
+
+label {
+    padding: 1px;
+    margin: 14px;
+    position: absolute;
+    z-index: 1;
+}
+
+ul {
+    top: 70px;
+    position: absolute;
+    width: 100%
+}
+
+ul li span {
+    float: right;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .4);
+    display: none;
+}
+.bg2 { /* escurece a home para destaque */
+	position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .3);
+    display: block;
+}
+#all{
+	position: sticky;
+    top:0;
+    z-index:10;
+}
+
+
+#sub10 #obras {/* O width aqui deve ser igual ao width na id #principal para não dar erro */
+    top: -70px;
+    position: absolute;
+    width: 130px;
+    pointer-events: none;
+}
+
+#sub10:hover #obras {
+    left: 100%;
+    pointer-events: initial
+}
+
+#sub10 {
+    overflow: hidden;
+    height: 66px;
+}
+
+#sub11 #contato {
+    top: -70px;
+    position: absolute;
+    width: 130px;
+    pointer-events: none;
+}
+
+#sub11:hover #contato {
+    left: 100%;
+    pointer-events: initial;
+	width: 340px;
+}
+
+#sub11 {
+    overflow: hidden;
+    height: 66px;
+}
+
+/* inicio do form */
+#form1{
+	top:10px;
+	position: relative;
+	left:25px;
+	opacity:0;
+	transition: all .4s;
+}
+#sub11:hover #contato #form1{opacity:1;}
+
+.white{
+	color: #fff;
+}
+
+#enviar{
+	font-family: "Agency FB", Arial, SansSerif;
+	font-size:1em;
+	position:relative;
+	top: 30px;
+	left:110px;
+	background-color: rgb(176, 224, 230);
+	color: black;
+	padding: 15px;
+	padding-right:20px;
+	padding-left:20px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	border: 2px solid #3F8E99;
+	transition: all .4s;
+	cursor: pointer;
+}
+#enviar:hover{
+	background-color: #3F8E99;
+	border-color: rgb(176, 224, 230);
+	color: white;
+	transition: all .4s;
+}
+
+/* fim do form */
+/* Fim Menu hamburguer */
+
+/* CSS do conteudo */
+#espaco{
+    position:relative;
+    height: 55px;
+}
+.conteudo{
+	text-align: justify;
+	position: relative;
+	left: 17%;
+    width: 67%;
+}
+.conteudo p{
+    margin-bottom:20px;
+}
+.titulo{
+    margin-bottom: 20px;
+    font-size:1.3em;
+}
+
+.moldura{
+	border: 10px ridge rgb(100,100,100);
+}
+
+.estiloimg1{
+	width:450px;
+	height:auto;
+}
+
+.img100{
+	width:100%;
+	height:auto;
+}
+/*
+#mueller{
+	bottom:340px;
+	height:auto;
+	position: relative;
+	opacity:0;
+	transition: all .4s;
+}
+#mueller:hover{
+	opacity:1;
+	transition: all .4s;
+}
+*/
+/* Inicio do CSS do slide show */
+	* {box-sizing:border-box}
+
+/* caixa do Slideshow */
+.slideshow-container {
+  max-width: 65%;
+  position: relative;
+  margin: auto;
+  border:  7px solid #777;
+}
+
+/* Esconde as imagens por padrão*/
+.mySlides {
+  display: none;
+}
+
+/* botão "proximo" e "anterior" */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* posição do botão "proximo" */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Ao passar o mouse, adicione uma cor de fundo preto com um pouco de transparência */
+.prev:hover, .next:hover {
+  background-color: rgba(50,50,50,0.8);
+}
+
+/* texto da legenda */
+.text {
+  color: #f2f2f2;
+  font-size: 0.65em;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* texto dos numeros (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Os circulos */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* animação de transição */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* mudança de cor da legenda */
+.legenda{
+	color: #111;
+}
+/* Fim do css do slide show */
+
+/* Inicio do CSS da pag sobre */
+
+.foto{
+	background-repeat: no-repeat;
+	border: 10px ridge rgb(100,100,100);
+	width:120px;
+	height:128px;
+	background-image: url("../imagens/mueller/Edgar_Mueller.jpg");
+	transition: all .4s;
+	webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4ss;
+}
+.foto:hover{
+	background-repeat: no-repeat;
+	border: 10px ridge rgb(100,100,100);
+	width:120px;
+	height:128px;
+	background-image: url("../imagens/mueller/Edgar_Mueller_vetor.fw.png");
+	transition: all .4s;
+	webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+
+/* Fim do CSS da pag sobre */
+
+.mandar{
+	font-family: "Agency FB", Arial, SansSerif; 
+	font-size:1em;
+	position:relative;
+	background-color: rgb(176, 224, 230);
+	color: black;
+	padding: 15px;
+	padding-right:20px;
+	padding-left:20px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	border: 2px solid #3F8E99;
+	transition: all .4s;
+	cursor: pointer;
+}
+.mandar:hover{
+	background-color: #3F8E99;
+	border-color: rgb(176, 224, 230);
+	color: white;
+	transition: all .4s;
+}
+
+.setinha{
+	font-size:0.5em;
+}
+}
+/* Fim do media query para tela menores que 500px */

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Edgar Müeller - Sobre</title>
+<link href="estilo/estilo.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- Inicio do menu !-->
+<script>
+  function myFunction(x) {
+      x.classList.toggle("change");
+  }
+  </script>
+<nav id="all">
+<input type="checkbox" id="chec">
+<label for="chec">
+  <div class="container" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
+</label>
+<div class="bg"></div>
+<nav id="principal">
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li id="sub10">
+          <div class="a">Obras <span>+</span></div>
+          <nav id="obras">
+              <ul>
+                  <li ><a href="3dpavement.html">3D Pavement Art</a></li>
+                  <li ><a href="evolution.html">Evolution</a></li>
+                  <li ><a href="thecaves.html">The Caves</a></li>
+                  <li ><a href="ark.html">The Ark</a></li>
+              </ul>
+          </nav>
+      </li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="estilo.html">Estilo das obras</a></li>
+	  <li id="sub11"><div class="a">Contato <span>+</span></div>
+		<div id="contato">
+		<form action="?valid=1" id="form1" name="form1" method="post">
+		<p class="white">Nome*:</p> <p><input type="text" name="nome" required placeholder="Nome completo"></p> <br>
+		<p class="white">E-mail*:</p> <p><input type="email" name="email" required placeholder="E-mail para contato"></p> <br>
+		<p class="white">Empresa:</p> <p><input type="text" name="empresa" placeholder="Empresa representada"></p> <br>
+		<p class="white">Posição:</p> <p><input type="text" name="posicao" placeholder="Seu cargo"></p> <br>
+		<p class="white">Mensagem*:</p> <p><textarea name="mensagem" cols="40" rows="8" required placeholder="Sua mensagem"></textarea></p>
+		<input type="submit" value="Enviar" id="enviar">
+		</form>
+		</div>
+	  </li>
+  </ul>
+</nav>
+</nav>
+<!-- Fim do menu !-->
+
+<!-- Inicio dos conteudos !-->
+<div style="background-color: rgba(0, 0, 0, .6);">
+<section id="espaco">&nbsp;</section>
+<section class="titulo" style="color:#fff"><center><h1><u>SOBRE</u> <u>MIM</u></h1></center></section>
+<br>
+<center><div class="foto" ><img src="imagens/mueller/fundo_transparente.fw.png" id="tra" width="120px" height="128px" style="background-size:cover;"></div></center>
+<section>
+<br>
+	<div class="conteudo" style="color:#fff;"> 
+		<div class="psobre"><p> Edgar Müller nasceu em Mülheim / Ruhr em 10 de julho de 1968. Ele cresceu na cidade rural de Straelen, na margem oeste da Alemanha. Seu fascínio pela pintura começou na infância, com pinturas de cenas rurais de Straelen.</p></div>
+		<div class="psobre"><p> Edgar cursou o ensino médio na cidade vizinha de Geldern, onde ocorreu uma competição internacional de pintores de rua. Inspirado pelas obras de arte transitórias que o conheceram a caminho da escola, Edgar Müller decidiu entrar na competição. Ele participou pela primeira vez aos 16 anos, vencendo a competição, aos 19 anos, com uma cópia do famoso "Jesus em Emaús" (Caravaggio). Nos anos seguintes, ele participou de muitas outras competições internacionais.</p></div>
+		<div class="psobre"><p>Desde 1998, Edgar Müller detém o título de 'maestro madonnari'. O título é premiado no maior festival de pintura de rua do mundo, chamado The Grazie Festival. Por volta dos 25 anos, Müller decidiu dedicar-se completamente à pintura de rua. Ele viajou por toda a Europa, ganhando a vida com sua arte transitória. Ele deu oficinas nas escolas e foi co-organizador e membro do comitê de vários festivais de arte de rua. Müller criou o primeiro (e até agora único) painel de Internet para pintores de rua na Alemanha - um fórum projetado para promover a solidariedade entre pintores de rua alemães e internacionais.</p></div>
+		<div class="psobre"><p> Por muitos anos, Edgar Müller apresentou às pessoas as grandes obras de antigos mestres, desenhando suas cópias perfeitas aos pés dos observadores. Müller convidou seu público a compartilhar seu fascínio com a arte dos velhos mestres, ajudando-os a compreender profundamente a visão de mundo dos velhos mestres.</p>
+		<p> Apesar de participar de cursos com artistas conhecidos e de extensos estudos no campo do design de comunicação, Edgar é realmente um autodidata. Ele está sempre procurando novas formas de se expressar e agora está buscando uma nova forma de arte e criando seu próprio estilo.</p></div>
+		<div class="psobre"><p> Devido à sua base na pintura tradicional e na comunicação moderna, Mueller usa uma linguagem mais simples e gráfica para sua arte. Ele pinta grandes áreas da vida pública urbana e dá-lhes uma nova aparência, desafiando assim as percepções dos transeuntes. O observador se torna parte do novo cenário oferecido. Ao seguir suas vidas diárias, as pessoas mudam a declaração das pinturas, apenas passando pela cena.</p></div>
+	</div>
+<br>
+</section>
+</div>
+<script>
+setTimeout(function resposta(){
+var url_ = new URL(location.href);
+var valid = url_.searchParams.get("valid");
+
+if (valid == 1){
+		window.alert("Sua mensagem foi enviada com sucesso! Vamos analisa-la e tentaremos entrar em contato por e-mail o mais breve possivel")
+}
+},500);
+</script>
+</body>
+</html>

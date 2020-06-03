@@ -1,0 +1,270 @@
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+
+
+
+
+/*  Inicio do media query para monitor com mais de 1000px   med01  */
+@media screen and (min-width: 980px){
+/* Inicio do CSS dos accordions */
+
+/* Estilo dos botões usados ​​para abrir e fechar o painel de acordeão */
+#faq{
+	width: 88%;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+/* Adicione uma cor de fundo ao botão se ele for clicado (adicione a classe .active com JS) e quando você passar o mouse sobre ela (hover) */
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+/* Estilize o painel de acordeão. Nota: oculto por padrão */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.pgeral {
+	font-family: Calibri, Arial, SansSerif;
+	font-size: 0.8em;
+	line-height: 150%;
+	text-align: justify;
+}
+
+.punico{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.pcima{
+	padding-top: 15px;
+}
+
+.pbaixo{
+	padding-bottom: 15px;
+}
+
+/* Fim do CSS dos accordions */
+}
+
+
+
+
+
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+
+
+
+
+/* Inicio do media query para tela de 500px a 980px  med01 */
+@media screen and (min-width: 500px) and (max-width: 980px){
+/* Inicio do CSS dos accordions */
+
+/* Estilo dos botões usados ​​para abrir e fechar o painel de acordeão */
+#faq{
+	width: 80%;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+/* Adicione uma cor de fundo ao botão se ele for clicado (adicione a classe .active com JS) e quando você passar o mouse sobre ela (hover) */
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+/* Estilize o painel de acordeão. Nota: oculto por padrão */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.pgeral {
+	font-family: Calibri, Arial, SansSerif;
+	font-size: 0.8em;
+	line-height: 150%;
+	text-align: justify;
+}
+
+.punico{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.pcima{
+	padding-top: 15px;
+}
+
+.pbaixo{
+	padding-bottom: 15px;
+}
+
+/* Fim do CSS dos accordions */
+}
+
+
+
+
+
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+			/* == */
+
+
+
+
+/* Inicio do media query para tela menores que 500px  med01 */
+@media screen and (max-width: 500px){
+/* Inicio do CSS dos accordions */
+
+/* Estilo dos botões usados ​​para abrir e fechar o painel de acordeão */
+#faq{
+	width: 77%;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+/* Adicione uma cor de fundo ao botão se ele for clicado (adicione a classe .active com JS) e quando você passar o mouse sobre ela (hover) */
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+/* Estilize o painel de acordeão. Nota: oculto por padrão */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.pgeral {
+	font-family: Calibri, Arial, SansSerif;
+	font-size: 0.8em;
+	line-height: 150%;
+	text-align: justify;
+}
+
+.punico{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.pcima{
+	padding-top: 15px;
+}
+
+.pbaixo{
+	padding-bottom: 15px;
+}
+
+/* Fim do CSS dos accordions */
+}
+
+
+
+
